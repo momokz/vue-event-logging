@@ -1,0 +1,1 @@
+export const totalTime = state => state.totalTime;
