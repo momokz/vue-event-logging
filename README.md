@@ -1,6 +1,6 @@
 # vue2.0-tutorial
 
-> A Vue.js project
+> vuejs  事件记录
 
 ## Build Setup
 
