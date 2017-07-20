@@ -2,9 +2,9 @@
     <div id="wrapper">
         <nav class="navbar navbar-default">
             <div class="container">
-                <a href="" class="navbar-brand">
+                <span href="" class="navbar-brand">
                     <i class="glyphicon glyphicon-time"></i> 计划板
-                </a>
+                </span>
                 <ul class="nav navbar-nav">
                     <li>
                         <router-link to="/home">首页</router-link>
