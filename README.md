@@ -1,6 +1,9 @@
+# 2017-07-20
+更新代码
+
 # vue2.0-tutorial
 
-> vuejs  事件记录
+> vuejs  事件记录器
 
 ## Build Setup
 
