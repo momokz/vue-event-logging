@@ -13,29 +13,31 @@
                 <strong>还没有任何计划</strong>
             </p>
             <div class="list-group">
-                <a href="" class="list-group-item" v-for="(plan, index) in plans">
-                    <div class="row">
-                        <div class="col-sm-2 user-details">
-                            <img :src="plan.avatar" alt="" class="avatar img-circle img-responseive">
-                            <p class="text-center">{{plan.name}}</p>
+                <ul class="list-group">
+                    <li class="list-group-item" v-for="(plan, index) in plans">
+                        <div class="row">
+                            <div class="col-sm-3 user-details">
+                                <img :src="plan.avatar" alt="" class="avatar img-circle img-responseive">
+                                <p class="text-center">{{plan.name}}</p>
+                            </div>
+                            <div class="col-sm-2 text-center time-block">
+                                <h3 class="list-group-item-text total-time">
+                                    <i class="glyphicon glyphicon-time"></i>
+                                    {{plan.totalTime}}
+                                </h3>
+                                <p class="label label-primar text-center" style="color:#000;">
+                                    <i class="glyphicon glyphicon-calendar"></i> {{plan.date}}
+                                </p>
+                            </div>
+                            <div class="col-sm-6 comment-section">
+                                <p>{{plan.comment}}</p>
+                            </div>
+                            <div class="col-sm-1">
+                                <button class="btn btn-xs btn-danger delete-button" @click.prevent="deletePlan(index)">X</button>
+                            </div>
                         </div>
-                        <div class="col-sm-2 text-center time-block">
-                            <h3 class="list-group-item-text total-time">
-                                <i class="glyphicon glyphicon-time"></i>
-                                {{plan.totalTime}}
-                            </h3>
-                            <p class="label label-primar text-center" style="color:#000;">
-                                <i class="glyphicon glyphicon-calendar"></i> {{plan.date}}
-                            </p>
-                        </div>
-                        <div class="col-sm-7 comment-section">
-                            <p>{{plan.comment}}</p>
-                        </div>
-                        <div class="col-sm-1">
-                            <button class="btn btn-xs btn-danger delete-button" @click.prevent="deletePlan(index)">X</button>
-                        </div>
-                    </div>
-                </a>
+                    </li>
+                </ul>
             </div>
         </div>
     </div>
@@ -64,6 +66,7 @@ export default {
 </script>
 <style scoped>
 .avatar {
+    display: block;
     height: 75px;
     margin: 0 auto;
     margin-top: 10px;
@@ -79,8 +82,12 @@ export default {
 }
 .comment-section {
     padding: 20px;
+    font-size: 24px;
 }
 label{
     color: #000;
+}
+.total-time {
+    margin-top: 0;
 }
 </style>

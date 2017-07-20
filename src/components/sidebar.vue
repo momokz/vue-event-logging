@@ -4,7 +4,7 @@
             <h1 class="text-center">已有时长</h1>
         </div>
         <div class="panel-body">
-            <h1 class="text-center">{{totalTime}} 小时</h1>
+            <h1 class="text-center">{{totalTime}} <br>小时</h1>
         </div>
     </div>
 </template>

@@ -46,7 +46,7 @@ export default {
             };
             this.$store.dispatch('savePlan', plan);
             this.$store.dispatch('addTotalTime', this.totalTime);
-            history.go(-1);
+            this.$router.go(-1);
         }
     }
 }

@@ -6,14 +6,8 @@ import * as getters from './getters';
 Vue.use(Vuex);
 
 const state = {
-    totalTime: 6,
-    list: [{
-        name: '二者',
-        avatar: 'https://sfault-avatar.b0.upaiyun.com/147/223/147223148-573297d0913c5_huge256',
-        date: '2016-12-25',
-        totalTime: 6,
-        comment: '12月25日完善，陪女朋友一起过圣诞节需要6个小时'
-    }]
+    totalTime: 0,
+    list: []
 };
 
 const mutations = {
@@ -21,7 +15,7 @@ const mutations = {
         state.totalTime += parseInt(time);
     },
     DEC_TOTAL_TIME(state, time) {
-        state.totalTime -= time;
+        state.totalTime -= parseInt(time);
         if (state.totalTime < 0) {
             state.totalTime = 0;
         }
