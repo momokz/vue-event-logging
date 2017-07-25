@@ -33,7 +33,7 @@ export default {
     },
     methods: {
         save() {
-            if(this.date=='' && this.totalTime=='' && this.comment==''){
+            if (this.date === ''|| this.totalTime == '' || this.comment == '') {
                 alert('请添加日期、时间等信息哦');
                 return;
             }
